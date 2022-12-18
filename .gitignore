@@ -6,6 +6,9 @@ coverage
 coverage.json
 typechain
 
+# tinker code
+___*.*
+
 # vscode
 .vscode
 
