@@ -10,7 +10,7 @@ error FundMe__NotOwner();
 // Interface, Libraries, Contracts
 
 /** @title A contract for crowd funding
- *  @author Pam Wong
+ *  @author whypam
  *  @notice This contract is to demo a samplefunding contract
  *  @dev This implements price feeds as our library
  */

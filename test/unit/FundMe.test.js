@@ -149,8 +149,11 @@ const { developmentChains } = require("../../helper-hardhat-config")
                   const attackerConnectedContract = await fundMe.connect(
                       attacker
                   )
-                  await expect(attackerConnectedContract.withdraw()).to.be
-                      .reverted
+                  //await expect(attackerConnectedContract.withdraw()).to.be
+                  //    .reverted
+                  await expect(
+                      attackerConnectedContract.withdraw()
+                  ).to.be.revertedWith("FundMe__NotOwner")
               })
 
               it("cheaperWithdraw testing...", async function() {
