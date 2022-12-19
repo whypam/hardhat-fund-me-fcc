@@ -151,9 +151,14 @@ const { developmentChains } = require("../../helper-hardhat-config")
                   )
                   //await expect(attackerConnectedContract.withdraw()).to.be
                   //    .reverted
+
+                  //await expect(
+                  //    attackerConnectedContract.withdraw()
+                  //).to.be.revertedWith("FundMe__NotOwner") // <-- older version of hardhat-chai-matchers
+
                   await expect(
                       attackerConnectedContract.withdraw()
-                  ).to.be.revertedWith("FundMe__NotOwner")
+                  ).to.be.revertedWithCustomError(fundMe, "FundMe__NotOwner")
               })
 
               it("cheaperWithdraw testing...", async function() {
